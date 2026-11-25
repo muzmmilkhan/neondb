@@ -6,7 +6,11 @@ from psycopg import connect
 
 load_dotenv()
 
-app = FastAPI()
+app = FastAPI(
+    title="Employee Management API",
+    description="API for managing employees with CRUD operations",
+    version="1.0.0"
+)
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
